@@ -2,7 +2,7 @@ import checkout from "../pageObject.js/checkoutPage";
 import login from "../pageObject.js/loginPage";
 import productPage from "../pageObject.js/productPage";
 
-describe('TC03-Check out with credential and Check out ',function(){
+describe('TC03-Check out with valid credential and with correct product ',function(){
     
     let username,password,firstname, lastname,postalcode;
     let tiltle,price,description;
@@ -26,7 +26,7 @@ describe('TC03-Check out with credential and Check out ',function(){
         })
     })
  
-it('TC03-Check out with valid credential and check out with correct product',function(){
+it('TC03-Check out with valid credential and with correct product',function(){
 
       checkout.clickCheckOutBtn();
      login.verifyUrl('https://www.saucedemo.com/checkout-step-one.html');
