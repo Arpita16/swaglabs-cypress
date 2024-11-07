@@ -2,7 +2,7 @@ import checkout from "../pageObject.js/checkoutPage";
 import login from "../pageObject.js/loginPage";
 import productPage from "../pageObject.js/productPage";
 
-describe('TC03-Check out with valid credential and with correct product ',function(){
+describe('TC03-Check out with valid credential and compare with captured product details ',function(){
     
     let username,password,firstname, lastname,postalcode;
     let tiltle,price,description;
@@ -26,7 +26,7 @@ describe('TC03-Check out with valid credential and with correct product ',functi
         })
     })
  
-it('TC03-Check out with valid credential and with correct product',function(){
+it('TC03-Check out with valid credential and correct product',function(){
 
       checkout.clickCheckOutBtn();
      login.verifyUrl('https://www.saucedemo.com/checkout-step-one.html');
@@ -44,18 +44,15 @@ it('TC03-Check out with valid credential and with correct product',function(){
         description=productData.productDescription;
     }); 
             
-        cy.get('#item_4_title_link').then ((cartTitle)=>{
-            let testTitle= cartTitle.text();
-            expect(testTitle).to.equal(tiltle);
+        checkout.getProductTitle().then((cartTitle)=>{
+            expect(cartTitle.text()).to.equal(tiltle);
 
         });
-        cy.get('.inventory_item_price').then ((cartPrice)=>{
-            let testPrice=cartPrice.text();
-            expect(testPrice).to.equal(price);
+       checkout.getProductPrice().then ((cartPrice)=>{
+            expect(cartPrice.text()).to.equal(price);
         });
-        cy.get('.inventory_item_desc').then ((cartDescription)=>{
-            let testDescription=cartDescription.text();
-            expect(testDescription).to.equal(description);
+   checkout.getProductDescription().then ((cartDescription)=>{
+            expect(cartDescription.text()).to.equal(description);
         });      
         checkout.clickFinishBtn();
         checkout.verifyOrderMsg();

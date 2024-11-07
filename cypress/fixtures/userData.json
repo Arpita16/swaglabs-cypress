@@ -1,8 +1,8 @@
 {
     "username" : "standard_user",
     "password": "secret_sauce",
-   "firstname" : "Arpita",
-"lastname": "Banerjee",
-"postalcode":"17168"
+    "firstname" : "Arpita",
+    "lastname": "Banerjee",
+     "postalcode":"17168"
    
   }

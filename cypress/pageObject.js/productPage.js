@@ -3,19 +3,16 @@ class product{
     {
         return cy.get('.inventory_item_name');
     }
-    getProductByName(productName){
-        return cy.get('.inventory_item_name').contains(productName);
-        
-    }
-    getProductTitle(productName){
-       return this.getProductByName(productName).parents('.inventory_item_label').find('#item_4_title_link');
-    }
-    getProductPrice(productName){
-        return this.getProductByName(productName).parents('.inventory_item_description').find('.inventory_item_price');
-    }
-    getProductDescription(productName){
-        return this.getProductByName(productName).parents('.inventory_item_label').find('.inventory_item_desc');
-    }
+   
+   getProductTitle(){
+        return cy.get('#item_4_title_link');
+     }
+     getProductPrice(){
+         return cy.get(':nth-child(1) > [data-test="inventory-item-description"] > .pricebar > [data-test="inventory-item-price"]');
+     }
+     getProductDescription(){
+         return cy.get(':nth-child(1) > [data-test="inventory-item-description"] > .inventory_item_label > [data-test="inventory-item-desc"]');
+     }
     addProductToCart(){
         cy.get('#add-to-cart-sauce-labs-backpack').click();
     }

@@ -20,20 +20,20 @@ describe('TC02 Capture Product Details and Add to Cart',function(){
 })
 
 
-    it('TC02 Capture Product Details and Add to Cart same product',function(){
-          const productName="Sauce Labs Backpack";
-          let productDetails ={};
+    it('TC02 Capture Product Details and Add to Cart the same product',function(){
+         
+        let productDetails ={};
           
-          productPage.getProductTitle(productName).then((demo)=>{
+          productPage.getProductTitle().then((demo)=>{
               productDetails.productTitle= demo.text();
               
            });
           
-          productPage.getProductPrice(productName).then((demo)=>{
+          productPage.getProductPrice().then((demo)=>{
              productDetails.productPrice =demo.text();
           
           });
-          productPage.getProductDescription(productName).then((demo)=>{
+          productPage.getProductDescription().then((demo)=>{
              productDetails.productDescription=demo.text();
            
         cy.writeFile('cypress/fixtures/capturedValue.json',productDetails);

@@ -8,6 +8,17 @@ class checkout{
         checkoutbtn:()=>{return cy.get('[id=checkout]')},
         finishbtn:()=>{return cy.get('[id="finish"]')} 
     }
+    
+
+    getProductTitle(){
+        return cy.get('[data-test="inventory-item-name"]');
+    }
+    getProductPrice(){
+        return cy.get('[data-test="inventory-item-price"]');
+    }
+    getProductDescription(){
+        return cy.get('[data-test="inventory-item-desc"]');
+    }
 
 
     typeFirstName(firstname)
