@@ -41,11 +41,11 @@ Postal Code: Any postal code
 
 Click "Continue"
 
-Verified that the summary page shows the correct information for "Sauce Labs Backpack", including price, title, and description.
+Verify that the summary page shows the correct information for "Sauce Labs Backpack", including price, title, and description.
 
 Click "Finish"
 
-Verified that the message "Thank you for your order!" is displayed
+Verify that the message "Thank you for your order!" is displayed
 
 **Prerequisites**
 
@@ -86,7 +86,7 @@ npm install --save-dev cypress
 
 
 Run Cypress Tests in GUI mode:
-npx cypress open
+npx cypress open->E2E Testing->Start E2E Testing in Chrome->Specs->Double click on the Specs to run one by one 
 
 # Configuration
 
@@ -94,11 +94,11 @@ npx cypress open
 
   module.exports = defineConfig({
 
-  watchForFileChanges:false,
+  watchForFileChanges:false,// prevent cypress from automatically re-running tests whenever it detects a file change
   
   e2e: {
     
-    chromeWebSecurity:false,
+    chromeWebSecurity:false,//bypasses standard security policies
    
     setupNodeEvents(on, config) {
        
