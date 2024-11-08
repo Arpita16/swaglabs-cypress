@@ -1,11 +1,12 @@
 # swaglabs-cypress
-**Introduction**
+
+# Introduction
 
 This is a test automation project for "Sauce Demo" (https://www.saucedemo.com/ ) , built using Cypress, a JavaScript End-to-End testing framework.This website is designed for testing purposes and offers an e-commerce environment with login, product listings, and checkout flow.
 
-**Automated the Following Test Cases**
+### Automated the Following Test Cases
 
-Login with Valid Credentials 
+**Login with Valid Credentials**
 
 Navigate to the login page: https://www.saucedemo.com/
 
@@ -47,7 +48,7 @@ Click "Finish"
 
 Verify that the message "Thank you for your order!" is displayed
 
-**Prerequisites**
+# Prerequisites
 
 List of software and versions required to run the project (Node.js, npm, Cypress).
 
@@ -58,15 +59,15 @@ or yarn
 
 Cypress (this project is configured to use Cypress)
 
-**Installation**
+# Installation
 
-# Clone the repository
+## Clone the repository
 git clone https://github.com/Arpita16/swaglabs-cypress.git
 
-# Navigate to the project directory
+## Navigate to the project directory
 cd swaglabs-cypress
 
-# Install dependencies
+## Install dependency
 
 Install Node.js-Visit the official Node.js website: https://nodejs.org.(if not installed in the system)
 
@@ -74,18 +75,21 @@ Install npm latest version:npm install -g npm@latest(if not installed in the sys
 
 IDE application(Visual Studio Code recommended)
 
-# Check Versions
+## Check Version
 
 node -v
 
 npm -v
+
 # Install Cypress
+
 npm init -y
 
 npm install --save-dev cypress
 
 
-Run Cypress Tests in GUI mode:
+**Run Cypress Tests in GUI mode:**
+
 npx cypress open->E2E Testing->Start E2E Testing in Chrome->Specs->Double click on the Specs to run one by one 
 
 # Configuration
