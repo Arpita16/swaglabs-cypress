@@ -96,22 +96,22 @@ npx cypress open->E2E Testing->Start E2E Testing in Chrome->Specs->Double click 
 
 **Cypress configuration in cypress.json**
 
-  module.exports = defineConfig({
+     module.exports = defineConfig({
 
-  watchForFileChanges:false,// prevent cypress from automatically re-running tests whenever it detects a file change
+          watchForFileChanges:false,     // prevent cypress from automatically re-running tests whenever it detects a file change
   
-  e2e: {
+       e2e: {
     
-    chromeWebSecurity:false,//bypasses standard security policies
+                chromeWebSecurity:false,      //bypasses standard security policies
    
-    setupNodeEvents(on, config) {
+                setupNodeEvents(on, config) {
        
-       // implement node event listeners here
+                                    // implement node event listeners here
   
-               },
+                 },
   
-         },
+           },
   
-  });
+    });
 
 
