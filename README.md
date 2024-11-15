@@ -4,6 +4,8 @@
 
 This is a test automation project for "Sauce Demo" (https://www.saucedemo.com/ ) , built using Cypress, a JavaScript End-to-End testing framework.This website is designed for testing purposes and offers an e-commerce environment with login, product listings, and checkout flow.
 
+[![e2e-SauceDemoApp](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/ueep6p&style=for-the-badge&logo=cypress)](https://cloud.cypress.io/projects/ueep6p/runs)
+
 ### Automated the Following Test Cases
 
 **Login with Valid Credentials**
