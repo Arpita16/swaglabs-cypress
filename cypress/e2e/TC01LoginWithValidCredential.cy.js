@@ -1,6 +1,6 @@
+import loginPage from "D:/e2e-SauceDemoApp/cypress/pageObject.js/loginPage";
+import productPage from "D:/e2e-SauceDemoApp/cypress/pageObject.js/productPage";
 
-import login from "D:/e2e-SauceDemoApp/cypress/pageObject.js/loginPage";
-import product from "D:/e2e-SauceDemoApp/cypress/pageObject.js/productPage";
 
 describe('TC01-Login with credential',function(){
     
@@ -15,15 +15,15 @@ describe('TC01-Login with credential',function(){
 
  it('TC01-Login with valid credential',function(){
     
-        login.visitHomePage();
-        login.verifyUrl('https://www.saucedemo.com/');
-        login.typeUserName(username);
-        login.typePassword(password);
-        login.clickLoginBtn();
+        loginPage.visitHomePage();
+        loginPage.verifyUrl('https://www.saucedemo.com/');
+        loginPage.typeUserName(username);
+        loginPage.typePassword(password);
+        loginPage.clickLoginBtn();
         
-        login.verifyUrl('https://www.saucedemo.com/inventory.html');
-        product.getProductList().should('have.length',6);
-        product.getProductList().each(($el)=>{
+        loginPage.verifyUrl('https://www.saucedemo.com/inventory.html');
+        productPage.getProductList().should('have.length',6);
+        productPage.getProductList().each(($el)=>{
             let demo = $el.text();
                 cy.log(demo);
 

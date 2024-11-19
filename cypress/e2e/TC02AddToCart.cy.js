@@ -1,5 +1,5 @@
 import productPage from "D:/e2e-SauceDemoApp/cypress/pageObject.js/productPage";
-import login from "D:/e2e-SauceDemoApp/cypress/pageObject.js/loginPage";
+import loginPage from "D:/e2e-SauceDemoApp/cypress/pageObject.js/loginPage";
 
 
 
@@ -12,10 +12,10 @@ describe('TC02 Capture Product Details and Add to Cart',function(){
             username = data.username;
             password = data.password;
             
-        login.visitHomePage();
-        login.typeUserName(username);
-        login.typePassword(password);
-        login.clickLoginBtn();
+        loginPage.visitHomePage();
+        loginPage.typeUserName(username);
+        loginPage.typePassword(password);
+        loginPage.clickLoginBtn();
     });
 })
 
